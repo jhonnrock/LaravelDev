@@ -16,6 +16,9 @@ class CreateArchivosTable extends Migration
         Schema::create('archivos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre_cancion');
+            $table->string('subir');
+            $table->string('etiqueta');
+            $table->string('description');
 			$table->timestamps();
         });
     }

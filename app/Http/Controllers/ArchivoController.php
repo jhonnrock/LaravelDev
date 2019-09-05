@@ -21,7 +21,7 @@ class ArchivoController extends Controller
          ->select('tipousuarios.nombtipousuario')
          ->join('tipousuarios','users.tipousuario_id','=','tipousuarios.id')
          ->get();
-        dd($data);
+        // dd($data);
 		return \View::make('archivos.archivos',compact('data','filess'));
     }
 
@@ -32,7 +32,9 @@ class ArchivoController extends Controller
      */
     public function create()
     {
-        //
+        $files=Archivo::all();
+		$json['filess']=$files->toArray();
+		print_r(json_encode($json));
     }
 
     /**

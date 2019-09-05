@@ -5,20 +5,20 @@
 
 @section('librerias')	
 	@parent
-		{{HTML::script('libjs/angular.min.js')}}
-		{{HTML::script('libjs/angular.min.js.map')}}
-		{{HTML::script('js/archivos.js')}}
+		<script src='libjs/angular.min.js'></script>
+		<!-- <script src='libjs/angular.min.js.map'></script> -->
+
+		<script src="{{ asset('js/archivos.js') }}"></script>
+		
 
 @stop
 @section('contenido')
 
+
+
 <div class="container">
 	
-<div class="row">
-	<div class="col-md-10">
-		{{HTML::decode(HTMl::link('#','subir <i class="fa fa-cloud-download"></i>',array('class'=>'btn btn-warning','onclick'=>"obtaindata()")))}}
-	</div>
-</div>
+
 <div class="row">
 	<div id="mesajes">
 		
@@ -30,7 +30,15 @@
 		
 	</div>
 </div>
-<h2><i class="fa fa-th-list fa-lg"></i>Lista de subido  sus canciones</h2>
+
+
+
+<h3 class="text-center"><i class="fa fa-th-list fa-lg"></i>Lista de subido  sus canciones</h3>
+<div class="row">
+	<div class="col-md-10">
+		<a onclick="obtaindata()"><i class="fa fa-cloud-download btn btn-warning" ></i>Subir</a>
+	</div>
+</div>
 <div class="container-fluid">
 <div class="row">
 	<div class="panel-body">
@@ -61,14 +69,13 @@
 					<td>{{$fil->description}}</td>
 					
 					<td>
-						{{HTMl::decode(HTML::link('#','Mostrar <i class="glyphicon glyphicon-fire"></i>',array('class'=>'btn btn-success','onclick'=>"view(".$fil->id.")")))}}
+						<a href=#' onclick="view({{$fil->id}})"><i class="glyphicon glyphicon-fire btn btn-success"></i>Mostrar</a>
 					</td>
-					<td>{{HTML::decode(html::link('#','editar<i class="glyphicon glyphicon-fire"></i>',array('class'=>'btn btn-info','onclick'=>"editfile(".$fil->id.")")))}}
+					<td><a href='#' onclick="editfile({{$fil->id}})"> editar<i class="glyphicon glyphicon-fire btn btn-info"></i></a>
 
 					</td>
  <td>
-			{{HTMl::decode(HTML::link('#','delete<i class="glyphicon glyphicon-trash"></i>',array('class'=>'btn btn-danger','onclick'=>"deletes(".$fil->id.")")))}}
-
+			<a href='#' onclick="deletes({{$fil->id}})"> delete<i class="glyphicon glyphicon-trash btn btn-danger"></i></a>
 </td>
 
 				</tr>
@@ -89,6 +96,7 @@
 		
 
 </div>
+
 <!-- ///para e;l save  -->
 		<!-- <a class="btn" data-toggle="modal" href="#myModal">Launch Modal</a> -->
 		<div class="modal fade" id="myModal">
@@ -132,8 +140,4 @@
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 	
-
-
-
-
 @stop

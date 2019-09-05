@@ -26,6 +26,7 @@
 		<script src="libjs/custom.js"></script>
         <script src="libjs/morris.js"></script>
         <script src="libjs/raphael-2.1.0.min.js"></script>
+        
 
         @show
 		
@@ -49,7 +50,7 @@
 padding: 15px 50px 5px 50px;
 float: right;
 font-size: 16px;">   
-
+</div>
 </nav> 
   
 
@@ -67,7 +68,10 @@ font-size: 16px;">
                        
                     <a href="/artist"><i class="fa fa-qq fa-3x btn btn-default"></i>Canciones</a>
                     </li>
-
+                    <li>
+                       
+                       <a href="/archivo"><i class="fa fa-cloud-download fa-3x btn btn-default"></i>Archivos</a>
+                       </li> 
                     <li>
                        
                        <a href="/artist"><i class="fa fa-linux fa-3x btn btn-default"></i>Genero</a>
@@ -86,14 +90,9 @@ font-size: 16px;">
                        
                        <a href="/artist"><i class="fa fa-font fa-3x btn btn-default"></i>Artista</a>
                        </li> 
-                       <li>
+                     
                        
-                       <a href="/artist"><i class="fa fa-cloud-download fa-3x btn btn-default"></i>Archivos</a>
-                       </li> 
-                       
-                  <li  >
-                        <a  href="blank.html"><i class="fa fa-square-o fa-3x"></i> Blank Page</a>
-                    </li>	
+                  
                 </ul>
                   
 <br/>
@@ -114,7 +113,7 @@ font-size: 16px;">
                 <div class="row">
                     <div class="col-md-12">
                     
-                        <h5>Welcome Jhon Deo , Love to see you back. </h5>
+                        <h5>Welcome Johnny Penia Trujillo , Love to see you back. </h5>
                     </div>
                 </div>              
                  <!-- /. ROW  -->
