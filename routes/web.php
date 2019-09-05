@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/','Homecontroller@index');
+Route::get('/artist','ArtistController@index');
+Route::get('/archivo','ArchivoController@index');
+// Route::resource('artist','ArtistController');
