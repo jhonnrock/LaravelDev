@@ -14,6 +14,7 @@ class AlbumController extends Controller
     public function index()
     {
         //
+        
     }
 
     /**
